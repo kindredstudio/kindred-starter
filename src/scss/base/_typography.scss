@@ -1,0 +1,66 @@
+/* FONTS */
+
+// @font-face {
+//   font-family: 'caslon';
+//   font-style: normal;
+//   font-weight: 400;
+//   src: url('../../assets/fonts/ACaslonPro-Regular.woff2') format('woff2'),
+//     url('../../assets/fonts/ACaslonPro-Regular.woff') format('woff');
+// }
+
+html {
+  font-size: 10px;
+}
+
+body {
+  color: $color_text;
+  font-family: $font_main;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.025rem;
+  line-height: 1.5;
+}
+
+// h1,
+// .h1,
+// h2,
+// .h2,
+// h3,
+// .h3,
+// h4,
+// .h4,
+// h5,
+// .h5,
+// h6,
+// .h6 {
+// }
+
+p {
+  font-size: 1.6rem;
+}
+
+.rte p {
+  margin-bottom: 1.6rem;
+}
+
+i,
+.italic {
+  font-style: italic;
+}
+
+.normal {
+  font-style: normal;
+}
+
+b,
+strong,
+.bold {
+  font-weight: 700;
+}
+
+// @include media-query($tablet-sm) {
+//   h1,
+//   .h1 {
+//     font-size: 2rem;
+//   }
+// }

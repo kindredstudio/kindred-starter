@@ -1,0 +1,11 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<section class="archive">
+    {% include ['components/post-preview.twig'] %}
+</section>
+
+{% include ['components/pagination.twig'] %}
+
+{% endblock %}

@@ -1,0 +1,18 @@
+<article class="preview preview-{{ post.post_type }}" id="preview-{{ post.ID }}">
+  {% block content %}
+
+      {% if post.get_thumbnail %}
+        <a href="{{ post.link }}">
+          <img src="{{ post.thumbnail.src }}"/>
+        </a>
+      {% endif %}
+
+      <h2 class="post-title"><a href="{{ post.link }}">{{ post.title }}</a></h2>
+      <p>{{ post.get_preview }}</p>
+
+      <div class="read-more">
+        <a href="{{ post.link }}"><h4>read more</h4></a>
+      </div>
+
+  {% endblock %}
+</article>

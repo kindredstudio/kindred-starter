@@ -1,0 +1,63 @@
+form {
+  margin: 0;
+}
+
+a,
+area,
+button,
+[role='button'],
+input,
+label,
+select,
+summary,
+textarea {
+  touch-action: manipulation;
+}
+
+input,
+textarea {
+  color: $color_text;
+
+  @include placeholder {
+    color: $color_text;
+  }
+}
+
+input,
+textarea,
+select {
+  max-width: 100%;
+  border-radius: 0;
+
+  &[disabled] {
+    border-color: $color_disabled-border;
+    background-color: $color_disabled;
+    cursor: default;
+  }
+}
+
+button,
+input[type='submit'],
+label[for] {
+  cursor: pointer;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+// Force option color (affects IE only)
+option {
+  background-color: $color_body;
+  color: $color_text;
+}
+
+.input-error {
+  border-color: $color_error;
+  background-color: $color_error-bg;
+  color: $color_text;
+}

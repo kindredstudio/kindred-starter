@@ -1,0 +1,6 @@
+// post pagination
+
+.post-pagination,
+.pagination {
+  @include flex-center;
+}

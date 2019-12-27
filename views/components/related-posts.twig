@@ -1,0 +1,14 @@
+{% if related %}
+
+  <section class="related-posts">
+    <h2>You Might Also Like</h2>
+    <div class="post-grid related-grid">
+      {% for relatedPost in related %}
+        {% include "components/post-preview.twig" with {
+          post: relatedPost
+        } %}
+      {% endfor %}
+    </div>
+  </section>
+
+{% endif %}

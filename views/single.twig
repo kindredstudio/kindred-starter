@@ -1,0 +1,30 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+  <article class="single wrap post-type-{{post.post_type}}" id="post-{{post.ID}}">
+
+    <section class="article-header">
+      {% if post.get_thumbnail %}
+      <figure>
+          <img src="{{post.thumbnail.src}}"/>
+      </figure>
+      {% endif %}
+
+      <figcaption>
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.date('m.j.y') }}</p>
+      </figcaption>
+    </section>
+
+    <section class="article-content">
+
+      {{post.content}}
+
+    </section>
+
+  </article>
+
+  {% include ['components/post-pagination.twig'] %}
+
+{% endblock %}
