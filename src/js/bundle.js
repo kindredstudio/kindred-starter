@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import 'slick-carousel';
 
 $(document).ready(function() {
 
@@ -42,3 +43,16 @@ $(document).ready(function() {
   });
 
 });
+
+// slick slider
+
+const $quoteSlider = $('.testimonials-slider .slick');
+
+const quoteSettings = {
+  easing: 'ease',
+  dots: false,
+  arrows: true,
+  autoplay: true
+};
+
+$quoteSlider.slick(quoteSettings);

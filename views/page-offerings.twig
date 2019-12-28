@@ -1,0 +1,97 @@
+{% extends "page.twig" %}
+
+{% block content %}
+
+  <div class="offerings-page">
+
+    <!-- section 1 -->
+
+    <section class="offerings-one wrap-md">
+      <h1>{{ post.meta('offerings-1_text') }}</h1>
+
+      <div class="flex-between">
+        <img class="column" src="{{ Image(post.meta('offerings-1_image-1')).src | resize(530, 650, true)}}" />
+
+        <img class="column" src="{{ Image(post.meta('offerings-1_image-2')).src | resize(575, 766, true)}}" />
+      </div>
+    </section>
+
+    <!-- section 2 -->
+
+    <section class="offerings-two">
+      <div class="heading wrap-md">
+        <h2>{{ post.meta('offerings-2_heading') }}</h2>
+      </div>
+
+      <div class="process wrap-sm">
+        {% for item in post.meta('offerings-2_blocks') %}
+            <div class="flex-between">
+                <h3>{{ item.heading }}</h3>
+                <p>{{ item.text }}</p>
+            </div>
+        {% endfor %}
+      </div>
+
+      <div class="wrap-sm">
+        <img src="{{ Image(post.meta('offerings-2_image')).src | resize(1024, 620, true)}}" />
+      </div>
+    </section>
+
+    <!-- section 3 -->
+
+    <section class="offerings-three wrap-md">
+      <div class="heading">
+        <h2>{{ post.meta('offerings-3_heading') }}</h2>
+      </div>
+
+      <div class="services flex-between">
+        {% for item in post.meta('offerings-3_blocks') %}
+            <div class="column">
+                <h3>{{ item.title }}</h3>
+                <h4>{{ item.timeline }}</h4>
+                <p>{{ item.description }}</p>
+            </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <!-- section 4 -->
+
+    <section class="offerings-four flex-between wrap-md">
+      <div class="column">
+        <div class="testimonials-slider slick">
+          {% for item in post.meta('testimonials') %}
+            <div class="testimonial">
+              <h1>{{ item.quote }}</h1>
+              <h2>{{ item.author }}</h2>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <img src="{{ Image(post.meta('offerings-4_image')).src | resize(530, 652, true)}}" />
+
+    </section>
+
+    <!-- section 5 -->
+
+    <section class="offerings-five wrap-md">
+      <div class="heading">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faqs">
+        {% for item in post.meta('faqs') %}
+          <div class="faq">
+            <h3 class="trigger">{{ item.question }}</h3>
+            <div class="answer hidden">
+              {{ item.answer }}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+
+  </div>
+
+{% endblock %}

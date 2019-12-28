@@ -1,0 +1,165 @@
+/* OFFERINGS PAGE */
+
+.offerings-page {
+  section {
+    margin-bottom: 15rem;
+  }
+
+  .heading {
+    margin-bottom: 8rem;
+
+    h2 {
+      position: relative;
+      display: inline-block;
+
+      &:after {
+        position: absolute;
+        top: 45%;
+        right: -5rem;
+        display: block;
+        width: 3.5rem;
+        height: 1px;
+        background-color: $color_underline;
+        content: '';
+      }
+    }
+  }
+
+  // section one
+
+  .offerings-one {
+    h1 {
+      width: 75%;
+      max-width: 760px;
+      margin-bottom: 12rem;
+    }
+
+    .flex-between {
+      position: relative;
+      align-items: flex-start;
+
+      .column {
+        flex-basis: 47.4%;
+
+        &:first-of-type {
+          flex-basis: 43.725%;
+        }
+      }
+    }
+  }
+
+  // section two
+
+  .offerings-two {
+    .process {
+      margin-bottom: 15rem;
+    }
+
+    .flex-between {
+      align-items: flex-start;
+      margin-bottom: 8rem;
+
+      h3 {
+        flex-basis: 45%;
+      }
+
+      p {
+        flex-basis: 53%;
+      }
+    }
+  }
+
+  // section three
+
+  .offerings-three {
+    .flex-between {
+      align-items: flex-start;
+
+      .column {
+        flex-basis: 27%;
+
+        h4 {
+          margin: 1rem 0 3rem;
+          color: $taupe;
+        }
+      }
+    }
+  }
+
+  // section four
+
+  .offerings-four {
+    .column {
+      width: 56%;
+      max-width: 510px;
+      flex-basis: 56%;
+      margin: 0 4rem;
+      text-align: center;
+
+      h2 {
+        margin-top: 6rem;
+      }
+    }
+
+    img {
+      width: 44%;
+      flex-basis: 44%;
+    }
+  }
+
+  // section five
+
+  .offerings-five {
+    .faq {
+      margin-bottom: 5rem;
+    }
+
+    .trigger {
+      position: relative;
+      align-items: center;
+      margin: 0 0 0 4rem;
+      cursor: pointer;
+
+      &::before,
+      &::after {
+        position: absolute;
+        top: 45%;
+        left: -4rem;
+        margin: 0 0 -8px;
+        background: $color_underline;
+        border-radius: 1px;
+        content: '';
+      }
+
+      &::before {
+        left: calc(-4rem + 8px);
+        width: 1px;
+        height: 15px;
+        margin-top: -7.5px;
+        background: $color_underline;
+        transition: all 300ms ease;
+      }
+
+      &::after {
+        left: calc(-4rem + 1px);
+        width: 16px;
+        height: 1px;
+        background: $color_underline;
+      }
+
+      &.expanded {
+        &::before {
+          height: 0;
+          margin-top: 0;
+        }
+      }
+    }
+
+    .hidden {
+      width: 75%;
+      max-width: 975px;
+      padding-top: 2.5rem;
+      margin-left: 4rem;
+    }
+  }
+}
