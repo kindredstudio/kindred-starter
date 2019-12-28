@@ -1,20 +1,26 @@
 // colours
-$black: #333333;
-$white: #ffffff;
+$black: #48453F;
+$white: #FCFCFB;
+$sage: #A6AA9E;
+$wheat: #E8E1D9;
+$coral: #CAA59C;
 
-$color_text: #d4d5d4;
-$color_link: #d4d5d4;
-$color_link-visited: #d4d5d4;
-$color_link-hover: #9f8f7a;
-$color_background-screen: #fff;
+$color_text: #48453F;
+$color_link: #48453F;
+$color_link-visited: #48453F;
+$color_link-hover: #A09B98;
+$color_background-screen: #FCFCFB;
 $color_text-screen: #d4d5d4;
 
 // background colours
-$color_body: #fefefe;
+$color_body: #FCFCFB;
+
+// lines
+$color_underline: #817B77;
 
 // placeholders
-$placeholder_color-foreground: #2d2a27;
-$placeholder_color-background: #f9f9f8;
+$placeholder_color-foreground: #48453F;
+$placeholder_color-background: #FCFCFB;
 
 // Other colours
 $color_accent: var(--color-accent);

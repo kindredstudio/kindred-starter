@@ -81,9 +81,7 @@ function add_to_context( $context ) {
 new StarterSite();
 
 /*
-
  Walker theme functions
-
 */
 
 // Enqueue scripts

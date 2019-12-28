@@ -1,24 +1,24 @@
-<nav role="navigation">
-    <ul class="site-nav">
-      {% for item in menu.get_items %}
-      {% if item.get_children %}
-          <li class="site-nav--has-submenu">
-            <a href="{{ item.link }}" class="trigger site-nav__link">
-              {{ item.title }}
-            </a>
-            <ul class="hidden site-nav__submenu">
-              {% for child in item.get_children %}
-                <li>
-                  <a href="{{ child.get_link }}" class="site-nav__link">{{ child.title }}</a>
-                </li>
-              {% endfor %}
-            </ul>
-          </li>
-      {% else %}
-          <li>
-            <a href="{{ item.link }}" class="site-nav__link">{{ item.title }}</a>
-          </li>
-      {% endif %}
-      {% endfor %}
-    </ul>
-</nav>
+<div class="nav-overlay">
+    <div class="nav-inner">
+
+      <button type="button" class="nav-close nav-trigger">
+          <span></span>
+          <span></span>
+      </button>
+
+      <nav id="site-navigation" class="site-nav" role="navigation">
+        <ul>
+          {% for item in menu_primary.get_items %}
+            <li class="h2">
+              <a href="{{ item.link }}" class="site-nav__link">{{ item.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav> <!-- end #site-navigation -->
+
+      <div class="mark">
+        <img src="{{theme.link}}/assets/mark.png" alt="mark">
+      </div>
+
+    </div> <!-- end .mm-inner -->
+</div> <!-- end .mm-overlay -->

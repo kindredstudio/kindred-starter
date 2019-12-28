@@ -1,0 +1,19 @@
+// promo banner
+
+.promo-banner {
+  padding: 1.5rem;
+  background-color: $wheat;
+  text-align: center;
+
+  h4 {
+    font-size: 1.3rem;
+  }
+
+  a {
+    border-bottom: 1px solid $black;
+
+    &:hover {
+      border-bottom: 1px solid $color_link-hover;
+    }
+  }
+}

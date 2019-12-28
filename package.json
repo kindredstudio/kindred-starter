@@ -1,7 +1,7 @@
 {
-  "name": "banana-starter",
+  "name": "kindred-theme",
   "version": "1.0.0",
-  "description": "An opinionated starter theme for WordPress, based on Timber Starter Tacklebox",
+  "description": "Custom theme for Kindred Studio, based on Timber Starter Tacklebox",
   "main": "bundle.js",
   "directories": {
     "lib": "lib"

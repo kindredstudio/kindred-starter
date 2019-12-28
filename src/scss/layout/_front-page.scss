@@ -1,1 +1,58 @@
 /* FRONT PAGE */
+
+.front-page {
+
+  section {
+    margin-bottom: 15rem;
+  }
+
+  .home-one {
+    max-width: 500px;
+    margin: 0 auto 15rem;
+    text-align: center;
+  }
+
+  .home-two {
+    .flex-between {
+      position: relative;
+      align-items: flex-start;
+
+      .column {
+        flex-basis: 47.4%;
+
+        &:first-of-type {
+          flex-basis: 43.725%;
+        }
+      }
+
+      .read-more {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+
+  .home-three {
+    padding-top: 3rem;
+    
+    .flex-between {
+      align-items: flex-end;
+
+      .column {
+        &:first-of-type {
+          flex-basis: 60%;
+        }
+
+        &:last-of-type {
+          flex-basis: 40%;
+          padding: 0 13rem 13rem;
+
+          h3 {
+            margin-bottom: 5rem;
+          }
+        }
+      }
+    }
+  }
+}

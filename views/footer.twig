@@ -1,41 +1,39 @@
 <footer class="site-footer">
 
-    <a href="{{ site.url }}"><img src="{{theme.link}}/assets/images/logo.png" alt=""></a>
+    <h2>Connect</h2>
+
+    <div class="flex-between">
+      <div class="column">
+        <a href="{{ site.url }}/newsletter">Join Our Newsletter</a>
+      </div>
+
+      <div class="column">
+        <ul>
+          <li>
+            <a href="{{ site.url }}/journal">Journal</a>
+          </li>
+
+          {% if options.instagram %}
+          <li>
+            <a href="{{ options.instagram }}" targer="_blank">Instagram</a>
+          </li>
+          {% endif %}
+
+          {% if options.pinterest %}
+          <li>
+            <a href="{{ options.pinterest }}" targer="_blank">Pinterest</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+
+      <div class="column">
+        <a href="{{ site.url }}/inquire">Work With Us</a>
+      </div>
+    </div>
 
     <div class="credit">
         <h4>&copy; {{ "now" | date('Y') }} {{ site.title }}</h4>
-        <a href="http://kindredstudio.ca" target="_blank">Kindred Studio</a>
     </div>
-
-    <ul>
-      {% if options.facebook %}
-      <li>
-        <a href="{{ options.facebook }}" targer="_blank">
-          {% include ['components/icon-facebook.twig'] %}
-        </a>
-      </li>
-      {% endif %}
-      {% if options.pinterest %}
-      <li>
-        <a href="{{ options.pinterest }}" targer="_blank">
-          {% include ['components/icon-pinterest.twig'] %}
-        </a>
-      </li>
-      {% endif %}
-      {% if options.instagram %}
-      <li>
-        <a href="{{ options.instagram }}" targer="_blank">
-          {% include ['components/icon-instagram.twig'] %}
-        </a>
-      </li>
-      {% endif %}
-      {% if options.twitter %}
-      <li>
-        <a href="{{ options.twitter }}" targer="_blank">
-          {% include ['components/icon-twitter.twig'] %}
-        </a>
-      </li>
-      {% endif %}
-    </ul>
 
 </footer>

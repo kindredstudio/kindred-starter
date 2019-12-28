@@ -19,7 +19,7 @@ const PRODUCTION = yargs.argv.prod;
 const server = browserSync.create();
 
 const config = {
-  domain: 'cara-co.local',
+  domain: 'kindred.local',
   browserList: ['> 0.2%', 'not dead'],
 };
 

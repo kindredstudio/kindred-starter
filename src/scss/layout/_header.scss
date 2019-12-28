@@ -1,1 +1,55 @@
 /* HEADER */
+
+.site-header {
+  max-width: 1340px;
+  margin: 7rem auto 12rem;
+
+  .site-logo {
+    max-width: 150px;
+  }
+
+  @include media-query($laptop-lg) {
+    width: 90%;
+  }
+}
+
+// nav menu
+
+.nav-overlay {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  display: none;
+  width: 40%;
+  max-width: 600px;
+  height: 100%;
+  padding: 5rem 7.5rem;
+  background-color: $sage;
+
+  .nav-inner {
+    @include flex;
+    height: 100%;
+    align-items: center;
+
+    li {
+      margin: 4rem 0;
+
+      a {
+        color: $white;
+        -webkit-font-smoothing: antialiased;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    .mark {
+      position: absolute;
+      right: 7.5rem;
+      bottom: 6rem;
+      width: 9px;
+    }
+  }
+}

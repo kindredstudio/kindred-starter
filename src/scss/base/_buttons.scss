@@ -20,5 +20,9 @@
 }
 
 .read-more {
-  display: inline-block;
+  hr {
+    width: 30px;
+    margin-top: 1rem;
+    background-color: $color_underline;
+  }
 }

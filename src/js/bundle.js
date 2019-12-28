@@ -33,12 +33,12 @@ $(document).ready(function() {
 
   // mobile menu
 
-  $('.mm-trigger').on('click', function() {
-    $(".mm-overlay").fadeToggle(ANIMATE_TIME);
+  $('.nav-trigger').on('click', function() {
+    $(".nav-overlay").fadeToggle(ANIMATE_TIME);
   });
 
-  $(".mm-close").on('click', function() {
-    $('.mm-overlay').fadeOut(ANIMATE_TIME);
+  $(".nav-close").on('click', function() {
+    $('.nav-overlay').fadeOut(ANIMATE_TIME);
   });
 
 });
