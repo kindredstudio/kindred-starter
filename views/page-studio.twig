@@ -1,0 +1,48 @@
+{% extends "page.twig" %}
+
+{% block content %}
+
+  <div class="studio-page">
+
+    <section class="studio-one">
+      <div class="wrap-md">
+        <h2>{{ post.meta('studio-1_heading') }}</h2>
+        <h1>{{ post.meta('studio-1_text') }}</h1>
+      </div>
+
+      <div class="wrap-sm">
+        <img src="{{ Image(post.meta('studio-1_image')).src | resize(1024, 620, true)}}" />
+      </div>
+    </section>
+
+    <section class="studio-two">
+      <h2>{{ post.meta('studio-2_heading') }}</h2>
+
+      <div class="principals flex-between">
+        {% for item in post.meta('bios') %}
+            <div class="column">
+                <h3>{{ item.name }}</h3>
+                <h4>{{ item.title }}</h4>
+                <p>{{ item.bio }}</p>
+            </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="studio-three">
+      <div class="flex-between">
+        <div class="column">
+          <img src="{{ Image(post.meta('studio-3_image-1')).src | resize(450, 620, true)}}" />
+        </div>
+
+        <div class="column">
+          <img src="{{ Image(post.meta('studio-3_image-2')).src | resize(540, 400, true)}}" />
+          <h2>{{ post.meta('studio-3_heading') }}</h2>
+          <p>{{ post.meta('studio-3_text') }}</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+{% endblock %}

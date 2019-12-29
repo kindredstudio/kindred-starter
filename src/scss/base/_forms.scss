@@ -20,20 +20,17 @@ textarea {
 
   @include placeholder {
     color: $color_text;
+    font-family: $font_main;
+    font-size: 1.8rem;
+    font-style: italic;
+    letter-spacing: 0.01em;
   }
 }
 
-input,
-textarea,
-select {
-  max-width: 100%;
+select,
+input[type='submit'] {
+  -webkit-appearance: none;
   border-radius: 0;
-
-  &[disabled] {
-    border-color: $color_disabled-border;
-    background-color: $color_disabled;
-    cursor: default;
-  }
 }
 
 button,
@@ -43,7 +40,8 @@ label[for] {
 }
 
 textarea {
-  min-height: 100px;
+  min-height: 170px;
+  vertical-align: top;
 }
 
 select::-ms-expand {
@@ -60,4 +58,69 @@ option {
   border-color: $color_error;
   background-color: $color_error-bg;
   color: $color_text;
+}
+
+// Caldera
+
+.caldera-grid {
+  .row {
+    margin-bottom: 3rem;
+
+    &:nth-last-child(n+3) {
+      .single {
+        @include flex-between;
+
+        .form-group {
+          flex-basis: 47.5%;
+        }
+      }
+    }
+  }
+
+  select.form-control {
+    font-style: italic;
+    line-height: 1.2;
+  }
+
+  .last_row {
+    text-align: center;
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.8em 0 0.65em;
+    border: none;
+    border-bottom: 1px solid $color_underline;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    color: $color_text;
+    font-family: $font_main;
+    font-size: 1.6rem !important;
+    font-style: italic;
+    letter-spacing: 0.01em;
+
+    &[disabled] {
+      border-color: $color_disabled-border;
+      background-color: $color_disabled;
+      cursor: default;
+    }
+  }
+
+  input[type='submit'] {
+    width: auto;
+    border-bottom: none;
+    font-family: $font_second;
+    -webkit-font-smoothing: subpixel-antialiased;
+    letter-spacing: 0.125em;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+
+    &:hover {
+      color: $taupe;
+    }
+  }
 }

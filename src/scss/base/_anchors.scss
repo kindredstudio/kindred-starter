@@ -36,3 +36,36 @@ a,
     }
   }
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  a {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      bottom: -0.175em;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: $color_underline;
+      content: '';
+    }
+
+    &:hover::after {
+      background: $color_link-hover;
+    }
+  }
+}
+
+h1 {
+  a::after {
+    bottom: 0.15em;
+  }
+}

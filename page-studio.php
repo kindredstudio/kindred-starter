@@ -1,7 +1,7 @@
 <?php
 /**
- * Template Name: Contact
- * The template for displaying the Contact page.
+ * Template Name: Studio
+ * The template for displaying the Studio page.
  *
  * Methods for TimberHelper can be found in the /lib sub-directory
  *
@@ -13,4 +13,4 @@
 $data = Timber::get_context();
 $post = new TimberPost();
 $data['post'] = $post;
-Timber::render( 'page-contact.twig', $data );
+Timber::render( 'page-studio.twig', $data );

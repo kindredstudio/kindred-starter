@@ -2,6 +2,18 @@
 
 {% block content %}
 
-  <section class="contact-page"></section>
+  <div class="contact-page">
+
+    <section class="contact-one wrap-md">
+      {{ post.meta('inquire_text') }}
+    </section>
+
+    <section class="contact-two">
+      {% filter shortcodes %}
+        [caldera_form id="CF59a7000511123"]
+      {% endfilter %}
+    </section>
+
+  </div>
 
 {% endblock %}
