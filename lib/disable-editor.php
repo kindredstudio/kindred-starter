@@ -9,7 +9,7 @@
 **/
 
 // disable for posts
-add_filter('use_block_editor_for_post', '__return_false', 10);
+// add_filter('use_block_editor_for_post', '__return_false', 10);
 
 /**
  * Templates and Page IDs without editor
@@ -78,7 +78,7 @@ function banana_allowed_block_types( $allowed_blocks, $post ) {
 		'core/heading',
 		'core/image',
 		'core/list',
-		'core/quote',
+		// 'core/quote',
 		'core/shortcode',
 		// 'core/audio',
 		// 'core/cover',
@@ -86,13 +86,13 @@ function banana_allowed_block_types( $allowed_blocks, $post ) {
 		// 'core/video',
 		// 'core/table',
 		// 'core/verse',
-		// 'core/code',
+		'core/code',
 		// 'core/freeform',
-		// 'core/html',
+		'core/html',
 		// 'core/preformatted',
-		// 'core/pullquote',
+		'core/pullquote',
 		// 'core/button',
-		// 'core/text-columns',
+		'core/text-columns',
 		// 'core/media-text',
 		// 'core/more',
 		// 'core/nextpage',

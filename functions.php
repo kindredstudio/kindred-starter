@@ -33,10 +33,6 @@ class StarterSite extends TimberSite {
 
 	// The point of having separate files is solely to save space in this file. Think of them as a standard PHP include or require.
 
-	function register_post_types(){
-		require('lib/custom-types.php');
-	}
-
 	function register_taxonomies(){
 		require('lib/taxonomies.php');
 	}
