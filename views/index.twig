@@ -2,8 +2,10 @@
 
 {% block content %}
 
-<section class="archive">
+<section class="archive flex-between-wrap">
+  {% for post in posts %}
     {% include ['components/post-preview.twig'] %}
+  {% endfor %}
 </section>
 
 {% include ['components/pagination.twig'] %}

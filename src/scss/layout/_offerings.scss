@@ -19,7 +19,7 @@
         display: block;
         width: 3.5rem;
         height: 1px;
-        background-color: $color_underline;
+        background-color: $color_border;
         content: '';
       }
     }
@@ -86,7 +86,7 @@
 
   .offerings-four {
     align-items: center;
-    
+
     .column {
       width: 56%;
       max-width: 510px;
@@ -124,7 +124,7 @@
         top: 45%;
         left: -4rem;
         margin: 0 0 -8px;
-        background: $color_underline;
+        background: $color_border;
         border-radius: 1px;
         content: '';
       }
@@ -134,7 +134,7 @@
         width: 1px;
         height: 15px;
         margin-top: -7.5px;
-        background: $color_underline;
+        background: $color_border;
         transition: all 300ms ease;
       }
 
@@ -142,7 +142,7 @@
         left: calc(-4rem + 1px);
         width: 16px;
         height: 1px;
-        background: $color_underline;
+        background: $color_border;
       }
 
       &.expanded {

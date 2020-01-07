@@ -1,0 +1,14 @@
+/* BLOG ARCHIVE */
+
+.archive {
+  max-width: 1300px;
+  margin: 0 auto;
+
+  article {
+    flex-basis: 30%;
+  }
+
+  @include media-query($laptop-lg) {
+    width: 90%;
+  }
+}

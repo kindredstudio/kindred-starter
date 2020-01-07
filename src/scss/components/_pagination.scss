@@ -3,4 +3,10 @@
 .post-pagination,
 .pagination {
   @include flex-center;
+
+  hr {
+    height: 40px;
+    margin: 0 3rem;
+    background-color: $color_border;
+  }
 }

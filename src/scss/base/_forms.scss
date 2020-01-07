@@ -93,7 +93,7 @@ option {
     max-width: 100%;
     padding: 0.8em 0 0.65em;
     border: none;
-    border-bottom: 1px solid $color_underline;
+    border-bottom: 1px solid $color_border;
     background: transparent;
     border-radius: 0;
     box-shadow: none;
@@ -121,6 +121,56 @@ option {
 
     &:hover {
       color: $taupe;
+    }
+  }
+}
+
+.mc4wp-form {
+  .flex-between {
+    align-items: center;
+
+    .column {
+      flex-basis: 42%;
+    }
+  }
+
+  input {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.8em 0 0.65em;
+    border: none;
+    border-bottom: 1px solid $color_border;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    color: $color_text;
+    font-family: $font_main;
+    font-size: 1.6rem !important;
+    font-style: italic;
+    letter-spacing: 0.01em;
+
+    &[disabled] {
+      border-color: $color_disabled-border;
+      background-color: $color_disabled;
+      cursor: default;
+    }
+  }
+
+  .btn {
+    input[type='submit'] {
+      width: auto;
+      padding: 0.8em 0 0;
+      border-bottom: none;
+      font-family: $font_second;
+      font-style: normal;
+      -webkit-font-smoothing: subpixel-antialiased;
+      letter-spacing: 0.125em;
+      text-transform: uppercase;
+      transition: all 300ms ease;
+
+      &:hover {
+        color: $taupe;
+      }
     }
   }
 }

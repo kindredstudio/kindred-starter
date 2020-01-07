@@ -17,7 +17,8 @@ $color_text-screen: #d4d5d4;
 $color_body: #FCFCFB;
 
 // lines
-$color_underline: #817B77;
+$color_border: #817B77;
+$color_border-hover: #CAC4C0;
 
 // placeholders
 $placeholder_color-foreground: #48453F;
@@ -25,7 +26,6 @@ $placeholder_color-background: #FCFCFB;
 
 // Other colours
 $color_accent: var(--color-accent);
-$color_border: var(--color-border);
 
 // Helper colours for form error states
 $color_disabled: #000000;

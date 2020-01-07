@@ -4,9 +4,9 @@
         <h2>Back</h2>
       </a>
     {% endif %}
-    <!-- {% if post.next and post.prev %}
-      <img src="{{theme.link}}/assets/images/circles2.png" alt="">
-    {% endif %} -->
+    {% if post.next and post.prev %}
+      |
+    {% endif %}
     {% if post.prev %}
       <a href="{{ post.prev.link }}" class="nav-text">
         <h2>Next</h2>

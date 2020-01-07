@@ -1,13 +1,17 @@
 <div class="pagination u-mb-rhythm">
-    {% if posts.pagination.prev %}
-      <a href="{{posts.pagination.prev.link}}" class="prev {{posts.pagination.prev.link|length ? '' : 'invisible'}}">
+  {% if posts.pagination.next %}
+      <a href="{{posts.pagination.next.link}}" class="next {{posts.pagination.next.link|length ? '' : 'invisible'}}">
         <h2>Back</h2>
       </a>
+  {% endif %}
+
+    {% if posts.pagination.next.link and posts.pagination.prev.link %}
+      <hr>
     {% endif %}
-    <!-- {% if post.next and post.prev %}
-      <img src="{{theme.link}}/assets/images/circles2.png" alt="">
-    {% endif %} -->
-    {% if posts.pagination.next %}
-        <a href="{{posts.pagination.next.link}}" class="next {{posts.pagination.next.link|length ? '' : 'invisible'}}">Next</a>
+
+    {% if posts.pagination.prev %}
+      <a href="{{posts.pagination.prev.link}}" class="prev {{posts.pagination.prev.link|length ? '' : 'invisible'}}">
+        <h2>Next</h2>
+      </a>
     {% endif %}
 </div>

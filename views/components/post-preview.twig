@@ -3,16 +3,11 @@
 
       {% if post.get_thumbnail %}
         <a href="{{ post.link }}">
-          <img src="{{ post.thumbnail.src }}"/>
+          <img src="{{ post.thumbnail.src | resize(400, 267, true)}}"/>
         </a>
       {% endif %}
 
-      <h2 class="post-title"><a href="{{ post.link }}">{{ post.title }}</a></h2>
-      <p>{{ post.get_preview }}</p>
-
-      <div class="read-more">
-        <a href="{{ post.link }}"><h4>read more</h4></a>
-      </div>
+      <a href="{{ post.link }}"><h3 class="post-title">{{ post.title }}</h3></a>
 
   {% endblock %}
 </article>
