@@ -1,0 +1,33 @@
+{#
+  Title: Accordion
+  Description: A block for showing content that can shown and hidden
+  Category: banana
+  Icon: sort
+  Keywords: accordion show hide
+  Mode: edit
+  Align: left
+  PostTypes: page
+  SupportsAlign: false
+  SupportsMode: true
+  SupportsMultiple: true
+#}
+
+<section class="b-accordion" style="--background-color: {{ fields.background_colour }}">
+	<div class="b-accordion__container wrapper">
+		{% if fields.heading %}
+			<h2>{{ fields.heading }}</h2>
+		{% endif %}
+		<div class="b-accordion__accordion">
+			{% for item in fields.accordion %}
+				<div class="b-accordion__item">
+					<button class="b-accordion__trigger h4 u-btn-reset">{{ item.heading }}</button>
+					<div class="b-accordion__hidden">
+						<div class="accordion-content__container">
+							{{ item.content }}
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

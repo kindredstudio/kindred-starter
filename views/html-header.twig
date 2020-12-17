@@ -1,31 +1,25 @@
 <!doctype html>
-<!--[if lt IE 7]><html class="no-js ie ie6 lt-ie9 lt-ie8 lt-ie7" {{site.language_attributes}}> <![endif]-->
-<!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8" {{site.language_attributes}}> <![endif]-->
-<!--[if IE 8]><html class="no-js ie ie8 lt-ie9" {{site.language_attributes}}> <![endif]-->
-<!--[if gt IE 8]><!-->
-  <html
-  class="no-js" {{site.language_attributes}}> <!--<![endif]-->
+<!-- Built by Kindred Studio https://kindredstudio.ca -->
+  <html {{site.language_attributes}}>
   <head>
     <meta charset="{{site.charset}}"/>
-    <title>{% if wp_title %}{{- wp_title -}}&nbsp;–&nbsp;{{- site.name -}}{% else %}{{- site.name -}}{% endif %}</title>
+    <title>{% if wp_title %}{{- wp_title -}}&nbsp;|&nbsp;{{- site.name -}}{% else %}{{- site.name -}}{% endif %}</title>
     <meta name="description" content="{{site.description}}">
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     {% include "social-meta-tags.twig" %}
 
-    {{function('wp_head')}}
+    {{ fn('wp_head') }}
 
     {# Favicon #}
-    <link href="/wp-content/uploads/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link rel="icon" href="/wp-content/themes/kindred/src/img/favicon.svg" type="image/svg+xml">
+    {# <link href="/wp-content/uploads/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
     <link href="/wp-content/uploads/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
     <link href="/wp-content/uploads/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
-    <link href="/wp-content/uploads/favicons/site.webmanifest" rel="manifest">
-    <link color="#efefef" href="/wp-content/uploads/favicons/safari-pinned-tab.svg" rel="mask-icon">
-    <link href="/wp-content/uploads/favicons/favicon.ico" rel="shortcut icon">
-    <meta content="#efefef" name="msapplication-TileColor">
+    <link href="/wp-content/uploads/favicons/site.webmanifest" rel="manifest"> #}
+    {# <link color="#efefef" href="/wp-content/uploads/favicons/safari-pinned-tab.svg" rel="mask-icon"> #}
+    {# <link href="/wp-content/uploads/favicons/favicon.ico" rel="shortcut icon"> #}
+    {# <meta content="#efefef" name="msapplication-TileColor">
     <meta content="/wp-content/uploads/favicons/browserconfig.xml" name="msapplication-config">
-    <meta content="#EFEFEF" name="theme-color">
-  </head>
-</html>
+    <meta content="#EFEFEF" name="theme-color"> #}

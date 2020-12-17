@@ -1,0 +1,24 @@
+{
+  "name": "kindredstudio/starter",
+  "description": "An opinionated starter theme for WordPress, based on Timber Starter Tacklebox",
+  "type": "wordpress-theme",
+  "minimum-stability": "stable",
+  "authors": [
+    {
+      "email": "dev@kindredstudio.ca",
+      "name": "kindred"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "timber/timber": "1.*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "5.7.16|6.*"
+  }
+}

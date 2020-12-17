@@ -1,0 +1,27 @@
+{#
+  Title: Banner
+  Description: A banner with text and optional background image
+  Category: banana
+  Icon: feedback
+  Keywords: text banner
+  Mode: edit
+  Align: left
+  PostTypes: page
+  SupportsAlign: false
+  SupportsMode: true
+  SupportsMultiple: true
+#}
+
+{% set background_image = Image(fields.background_image) %}
+
+<div class="b-text-banner u-section-spacer {{ fields.background_image ? 'has-background-image' }}" {% if fields.background_image %} style="--background-image:url('{{ background_image.src }}')" {% endif %}>
+	<div class="b-text-banner__container wrapper">
+		<h4>{{ fields.heading }}</h4>
+		{% if fields.social_banner %}
+			<h1>{{ fields.text }}</h1>
+		{% else %}
+			<h2>{{ fields.text }}</h2>
+		{% endif %}
+		<a href="{{ fields.button.url }}" target="{{ fields.button.target }}" class="btn btn-primary">{{ fields.button.title }}</a>
+	</div>
+</div>

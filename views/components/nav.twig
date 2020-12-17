@@ -9,16 +9,12 @@
       <nav id="site-navigation" class="site-nav" role="navigation">
         <ul>
           {% for item in menu_primary.get_items %}
-            <li class="h2">
+            <li>
               <a href="{{ item.link }}" class="site-nav__link">{{ item.title }}</a>
             </li>
           {% endfor %}
         </ul>
       </nav> <!-- end #site-navigation -->
-
-      <div class="mark">
-        <img src="{{theme.link}}/assets/mark.png" alt="mark">
-      </div>
 
     </div> <!-- end .mm-inner -->
 </div> <!-- end .mm-overlay -->

@@ -1,0 +1,25 @@
+{#
+  Title: Text and Image
+  Description: A block for displaying text and image side-by-side
+  Category: banana
+  Icon: layout
+  Keywords: text image
+  Mode: edit
+  Align: left
+  PostTypes: page post
+  SupportsAlign: false
+  SupportsMode: true
+  SupportsMultiple: true
+#}
+
+<section class="b-text-and-image">
+	<div class="b-text-and-image__container wrapper">
+		<div class="b-text-and-image__start">
+			{{ fields.text | raw  }}
+		</div>
+		<div class="b-text-and-image__end">
+			{% set image = Image(fields.image) %}
+			<img src='{{ image.src }}' alt='{{ image.title }}' clas="u-block">
+		</div>
+	</div>
+</section>

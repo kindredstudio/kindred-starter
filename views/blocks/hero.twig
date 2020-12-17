@@ -1,0 +1,46 @@
+{#
+  Title: Hero
+  Description: A hero banner
+  Category: banana
+  Icon: megaphone
+  Keywords: hero
+  Mode: edit
+  Align: left
+  PostTypes: page
+  SupportsAlign: false
+  SupportsMode: true
+  SupportsMultiple: true
+  supportsCustomClassName: true
+#}
+
+{% set background_image = Image(fields.background_image) %}
+
+{% set style = "
+  --background-color: #{fields.background_color};
+  --text-color: #{fields.text_color};
+  --background-image:url('#{ background_image.src }')"|trim
+%}
+
+<div class="b-hero" style="{{ style }}">
+	<div class="b-hero__container wrapper">
+		<div class="b-hero__start">
+			{% if fields.heading %}
+				<h1>{{ fields.heading }}</h1>
+			{% endif %}
+			{% if fields.text %}
+				<p>{{ fields.text  }}</p>
+			{% endif %}
+			{% if fields.button %}
+				<a href="{{ fields.button.url }}" class="btn btn-primary" {{ fields.button.target ? 'target="_blank"' }}>
+					{{ fields.button.title }}
+				</a>
+			{% endif %}
+		</div>
+		<div class="b-hero__end">
+			{% if fields.image %}
+				{% set image = Image(fields.image) %}
+				<img src="{{ image.src }}" alt="{{ image.title }}" class="u-block">
+			{% endif %}
+		</div>
+	</div>
+</div>

@@ -6,13 +6,16 @@
 
 <header class="site-header flex-between" role="banner">
 
-  <a href="{{ site.link }}">
-    <img class="site-logo" itemscope itemtype="http://schema.org/Organization" src="{{theme.link}}/assets/logo.png" alt="logo">
-  </a>
+  {% set logo = Image(options.logo) %}
 
-    <button type="button" id="showLeft" class="nav-trigger">
-      <span></span>
-      <span></span>
-    </button>
+	<a href="{{ site.link }}" aria-label="Home">
+		{% if logo.id != null %}
+			<img class="site-logo" src="{{ logo.src }}" alt="logo">
+		{% else %}
+			{{ site.name }}
+		{% endif %}
+	</a>
+
+  {% include "hamburger.twig" %}
 
 </header>

@@ -42,17 +42,17 @@ $(document).ready(function() {
     $('.nav-overlay').fadeOut(ANIMATE_TIME);
   });
 
+  // slick slider
+
+  // const $quoteSlider = $('.testimonials-slider .slick');
+  //
+  // const quoteSettings = {
+  //   easing: 'ease',
+  //   dots: false,
+  //   arrows: true,
+  //   autoplay: true
+  // };
+  //
+  // $quoteSlider.slick(quoteSettings);
+
 });
-
-// slick slider
-
-const $quoteSlider = $('.testimonials-slider .slick');
-
-const quoteSettings = {
-  easing: 'ease',
-  dots: false,
-  arrows: true,
-  autoplay: true
-};
-
-$quoteSlider.slick(quoteSettings);

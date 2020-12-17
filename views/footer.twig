@@ -1,37 +1,5 @@
 <footer class="site-footer">
 
-    <h2>Connect</h2>
-
-    <div class="flex-between">
-      <div class="column">
-        <a href="{{ site.url }}/sign-up">Join Our Newsletter</a>
-      </div>
-
-      <div class="column">
-        <ul>
-          <li>
-            <a href="{{ site.url }}/journal">Journal</a>
-          </li>
-
-          {% if options.instagram %}
-          <li>
-            <a href="{{ options.instagram }}" targer="_blank">Instagram</a>
-          </li>
-          {% endif %}
-
-          {% if options.pinterest %}
-          <li>
-            <a href="{{ options.pinterest }}" targer="_blank">Pinterest</a>
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="column">
-        <a href="{{ site.url }}/inquire">Work With Us</a>
-      </div>
-    </div>
-
     <div class="credit">
         <h4>&copy; {{ "now" | date('Y') }} {{ site.title }}</h4>
     </div>

@@ -99,9 +99,6 @@ option {
     box-shadow: none;
     color: $color_text;
     font-family: $font_main;
-    font-size: 1.6rem !important;
-    font-style: italic;
-    letter-spacing: 0.01em;
 
     &[disabled] {
       border-color: $color_disabled-border;
@@ -113,14 +110,10 @@ option {
   input[type='submit'] {
     width: auto;
     border-bottom: none;
-    font-family: $font_second;
-    -webkit-font-smoothing: subpixel-antialiased;
-    letter-spacing: 0.125em;
-    text-transform: uppercase;
     transition: all 300ms ease;
 
     &:hover {
-      color: $taupe;
+      color: $color_link-hover;
     }
   }
 }
@@ -145,9 +138,6 @@ option {
     box-shadow: none;
     color: $color_text;
     font-family: $font_main;
-    font-size: 1.6rem !important;
-    font-style: italic;
-    letter-spacing: 0.01em;
 
     &[disabled] {
       border-color: $color_disabled-border;
@@ -161,15 +151,10 @@ option {
       width: auto;
       padding: 0.8em 0 0;
       border-bottom: none;
-      font-family: $font_second;
-      font-style: normal;
-      -webkit-font-smoothing: subpixel-antialiased;
-      letter-spacing: 0.125em;
-      text-transform: uppercase;
       transition: all 300ms ease;
 
       &:hover {
-        color: $taupe;
+        color: $color_link-hover;
       }
     }
   }

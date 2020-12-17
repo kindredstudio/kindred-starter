@@ -1,0 +1,33 @@
+{#
+  Title: Example
+  Description: A example banner
+  Category: banana
+  Icon: megaphone
+  Keywords: example
+  Mode: edit
+  Align: left
+  PostTypes: page
+  SupportsAlign: false
+  SupportsMode: true
+  SupportsMultiple: true
+  supportsCustomClassName: true
+#}
+
+{% set style = "
+  --background-color: #{fields.background_colour};
+  --text-color: #{fields.text_colour};"|trim
+%}
+
+<section class="b-example" style="{{ style }}">
+	<div class="b-example__container wrapper">
+		<div class="b-example__start">
+			<h1>{{ fields.heading }}</h1>
+			<p>{{ fields.text }}</p>
+			<a href="{{ fields.button.url }}" {{ fields.button.target ? 'target="_blank"' }}>{{ fields.button.title }}</a>
+		</div>
+		<div class="b-example__end">
+			{% set image = Image(fields.image) %}
+			<img src="{{ image.src }}" alt="{{ image.title }}" class="u-block">
+		</div>
+	</div>
+</section>

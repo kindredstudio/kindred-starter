@@ -1,0 +1,27 @@
+.b-hero {
+  padding: var(--spacer) 0;
+  background-color: var(--background-color);
+  background-image: var(--background-image);
+  color: var(--text-color);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  &__container {
+    display: flex;
+  }
+
+  &__start {
+    flex-basis: 50%;
+  }
+
+  &__end {
+    flex-basis: 50%;
+  }
+
+  @include media('<=1080px') {
+    &__container {
+      display: block;
+    }
+  }
+}

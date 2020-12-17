@@ -4,40 +4,6 @@
 
   <div class="front-page">
 
-    <section class="home-one">
-      <h1>{{ post.meta('home-1_text') }}</h1>
-    </section>
-
-    <section class="home-two">
-      <div class="flex-between wrap-md">
-        <div class="column">
-          <img src="{{ Image(post.meta('home-1_portfolio').image_1).src | resize(530, 650, true)}}" />
-
-          <div class="read-more">
-            <a class="h2" href="{{ post.meta('home-1_portfolio').page_link }}">{{ post.meta('home-1_portfolio').link_text }}</a>
-            <hr />
-          </div>
-        </div>
-
-        <div class="column">
-          <img src="{{ Image(post.meta('home-1_portfolio').image_2).src | resize(575, 766, true)}}" />
-        </div>
-      </div>
-    </section>
-
-    <section class="home-three">
-      <div class="flex-between">
-        <div class="column">
-          <img src="{{ Image(post.meta('home-2_image')).src | resize(1350, 930, true)}}" />
-        </div>
-
-        <div class="column">
-          <h3>{{ post.meta('home-2_text') }}</h3>
-          <a href="{{ post.meta('home-2_url') }}"><h4>{{ post.meta('home-2_link') }}</h4></a>
-        </div>
-      </div>
-    </section>
-
   </div>
 
 {% endblock %}

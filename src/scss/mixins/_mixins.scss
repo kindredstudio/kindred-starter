@@ -19,13 +19,13 @@
 }
 
 // Wrappers
-@mixin wrap-lg {
-  max-width: 1240px;
+@mixin wrap {
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-@mixin wrap-md {
-  max-width: 1212px;
+@mixin wrap-lg {
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -33,6 +33,20 @@
   max-width: 1024px;
   margin: 0 auto;
 }
+
+// Spacers
+@mixin spacer {
+  margin: 8rem auto;
+}
+
+@mixin spacer-lg {
+  margin: 10rem auto;
+}
+
+@mixin spacer-sm {
+  margin: 6rem auto;
+}
+
 
 // Fixed bg img
 @mixin bg-img {
@@ -63,6 +77,17 @@
   display: -webkit-flex; /* NEW - Chrome */
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
+}
+
+// Flex Between
+@mixin flex-between-center {
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Chrome */
+  display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 

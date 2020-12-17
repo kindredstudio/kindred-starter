@@ -1,0 +1,8 @@
+<div class="social">
+  {% for item in options.footer.social %}
+    {% set icon = Image(item.icon) %}
+    <a href="{{ item.url }}">
+      <img src='{{ icon.src }}' alt='{{ logo.title }}'>
+    </a>
+  {% endfor %}
+</div>
