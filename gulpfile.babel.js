@@ -19,18 +19,18 @@ const PRODUCTION = yargs.argv.prod;
 const server = browserSync.create();
 
 const config = {
-  domain: 'kindred.local',
+  domain: 'kindred-starter.local',
   browserList: ['> 0.2%', 'not dead'],
 };
 
-const sync = done => {
+const sync = (done) => {
   server.init({
     proxy: config.domain,
   });
   done();
 };
 
-const reload = done => {
+const reload = (done) => {
   server.reload();
   done();
 };
@@ -108,7 +108,7 @@ const compress = () => {
     '!package.json',
     '!package-lock.json',
   ])
-    .pipe(gulpif(file => file.relative.split('.').pop() !== 'zip', replace('_banana', info.name)))
+    .pipe(gulpif((file) => file.relative.split('.').pop() !== 'zip', replace('_banana', info.name)))
     .pipe(zip(`${info.name}.zip`))
     .pipe(dest('bundled'));
 };
