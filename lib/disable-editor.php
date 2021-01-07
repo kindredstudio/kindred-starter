@@ -15,7 +15,7 @@
  * Templates and Page IDs without editor
  *
  */
-function banana_disable_editor( $id = false ) {
+function kindred_disable_editor( $id = false ) {
 
 	$excluded_templates = array(
 		 'templates/contact.php'
@@ -38,40 +38,40 @@ function banana_disable_editor( $id = false ) {
  * Disable Gutenberg by template
  *
  */
-function banana_disable_gutenberg( $can_edit, $post_type ) {
+function kindred_disable_gutenberg( $can_edit, $post_type ) {
 
 	if( ! ( is_admin() && !empty( $_GET['post'] ) ) )
 		return $can_edit;
 
-	if( banana_disable_editor( $_GET['post'] ) )
+	if( kindred_disable_editor( $_GET['post'] ) )
 		$can_edit = false;
 
 	return $can_edit;
 
 }
-add_filter( 'gutenberg_can_edit_post_type', 'banana_disable_gutenberg', 10, 2 );
-add_filter( 'use_block_editor_for_post_type', 'banana_disable_gutenberg', 10, 2 );
+add_filter( 'gutenberg_can_edit_post_type', 'kindred_disable_gutenberg', 10, 2 );
+add_filter( 'use_block_editor_for_post_type', 'kindred_disable_gutenberg', 10, 2 );
 
 /**
  * Disable Classic Editor by template
  *
  */
-function banana_disable_classic_editor() {
+function kindred_disable_classic_editor() {
 
 	$screen = get_current_screen();
 	if( 'page' !== $screen->id || ! isset( $_GET['post']) )
 		return;
 
-	if( banana_disable_editor( $_GET['post'] ) ) {
+	if( kindred_disable_editor( $_GET['post'] ) ) {
 		remove_post_type_support( 'page', 'editor' );
 	}
 
 }
-add_action( 'admin_head', 'banana_disable_classic_editor' );
+add_action( 'admin_head', 'kindred_disable_classic_editor' );
 
-add_filter( 'allowed_block_types', 'banana_allowed_block_types', 10, 2 );
+add_filter( 'allowed_block_types', 'kindred_allowed_block_types', 10, 2 );
 
-function banana_allowed_block_types( $allowed_blocks, $post ) {
+function kindred_allowed_block_types( $allowed_blocks, $post ) {
 
 	$allowed_blocks = array(
 		'core/paragraph',
