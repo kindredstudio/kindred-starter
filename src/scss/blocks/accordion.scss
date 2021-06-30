@@ -1,0 +1,66 @@
+.b-accordion {
+  background-color: var(--background-color);
+
+  &__trigger {
+    position: relative;
+    width: 100%;
+    padding-top: 3.2rem;
+    padding-right: 10%;
+    padding-bottom: 3.2rem;
+    margin-bottom: 0;
+    cursor: pointer;
+    text-align: left;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 4.5rem;
+      right: 0;
+      margin: 0 0 -8px;
+      background: black;
+      content: '';
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+
+    &::before {
+      right: 9px;
+      width: 3px;
+      height: 20px;
+      margin-top: -8px;
+    }
+
+    &::after {
+      right: 1px;
+      width: 20px;
+      height: 3px;
+    }
+  }
+
+  &__container {
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+
+    &:first-of-type {
+      border-top: 0;
+    }
+
+    &:last-of-type {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    &.active .c-accordion__trigger::before {
+      height: 0;
+      margin-top: 0;
+    }
+  }
+
+  &__hidden {
+    display: none;
+    padding: 0 0 6.4rem;
+  }
+}

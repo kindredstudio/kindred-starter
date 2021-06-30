@@ -1,0 +1,89 @@
+/* FONTS */
+
+@font-face {
+  font-family: 'amira';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../assets/Amira-Regular.woff2') format('woff2'),
+    url('../../assets/Amira-Regular.woff') format('woff');
+}
+
+html {
+  font-size: 10px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  color: $color_text;
+  font-family: $font_main;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.025rem;
+}
+
+h1,
+.h1 {
+  font-size: 3.4rem;
+  font-style: italic;
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+}
+
+h2,
+.h2 {
+  font-family: $font_second;
+  font-size: 1.6rem;
+  -webkit-font-smoothing: subpixel-antialiased;
+  letter-spacing: 0.125em;
+  text-transform: uppercase;
+}
+
+h3,
+.h3 {
+  font-size: 2.8rem;
+  font-style: italic;
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+}
+
+h4,
+.h4 {
+  font-family: $font_second;
+  font-size: 1.3rem;
+  -webkit-font-smoothing: subpixel-antialiased;
+  letter-spacing: 0.125em;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 2.1rem;
+  line-height: 1.33;
+}
+
+.post p {
+  margin-bottom: 1.6rem;
+  font-size: 1.6rem;
+  line-height: 1.375;
+}
+
+i,
+.italic {
+  font-style: italic;
+}
+
+.normal {
+  font-style: normal;
+}
+
+b,
+strong,
+.bold {
+  font-weight: 700;
+}
+
+// @include media-query($tablet-sm) {
+//   h1,
+//   .h1 {
+//     font-size: 2rem;
+//   }
+// }

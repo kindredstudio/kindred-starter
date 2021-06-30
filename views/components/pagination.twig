@@ -1,0 +1,17 @@
+<div class="pagination u-mb-rhythm">
+  {% if posts.pagination.next %}
+      <a href="{{posts.pagination.next.link}}" class="next {{posts.pagination.next.link|length ? '' : 'invisible'}}">
+        <h2>Back</h2>
+      </a>
+  {% endif %}
+
+    {% if posts.pagination.next.link and posts.pagination.prev.link %}
+      <hr>
+    {% endif %}
+
+    {% if posts.pagination.prev %}
+      <a href="{{posts.pagination.prev.link}}" class="prev {{posts.pagination.prev.link|length ? '' : 'invisible'}}">
+        <h2>Next</h2>
+      </a>
+    {% endif %}
+</div>

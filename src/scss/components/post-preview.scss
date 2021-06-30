@@ -1,0 +1,30 @@
+// post preview
+
+article.preview {
+  margin-bottom: 10rem;
+
+  a {
+    h3 {
+      width: 80%;
+      margin: 2rem 0 0 0.5rem;
+      font-size: 2.1rem;
+
+      &:after {
+        position: relative;
+        display: inline-block;
+        width: 3.5rem;
+        height: 1px;
+        margin-left: 1.5rem;
+        background-color: $color_border;
+        content: '';
+        vertical-align: middle;
+      }
+    }
+
+    &:hover {
+      h3:after {
+        background-color: $color_border-hover;
+      }
+    }
+  }
+}

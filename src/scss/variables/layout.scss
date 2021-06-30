@@ -1,0 +1,27 @@
+// Breakpoints used with the media-query mixin
+$desktop: 'desktop';
+$laptop-lg: 'laptop-lg';
+$laptop-md: 'laptop-md';
+$laptop-sm: 'laptop-sm';
+$tablet-lg: 'tablet-lg';
+$tablet-sm: 'tablet-sm';
+$mobile-lg: 'mobile-lg';
+$mobile-sm: 'mobile-sm';
+
+$breakpoints: (
+  $desktop: '(min-width: 1580px)',
+  $laptop-lg: '(max-width: 1380px)',
+  $laptop-md: '(max-width: 1200px)',
+  $laptop-sm: '(max-width: 1050px)',
+  $tablet-lg: '(max-width: 976px)',
+  $tablet-sm: '(max-width: 768px)',
+  $mobile-lg: '(max-width: 550px)',
+  $mobile-sm: '(max-width: 420px)'
+);
+
+// Grid
+$grid-medium: 46.85em;
+$grid-large: 61.85em;
+$grid-widescreen: 87.5em;
+$grid-max-width: 73.75em;
+$grid-gutter: 30px;

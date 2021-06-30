@@ -1,0 +1,24 @@
+// #wpadminbar #wp-admin-bar-wp-logo > .ab-item .ab-icon:before {
+//   content: '';
+//   background: url(../img/kindred.svg);
+//   background-size: cover;
+//   width: 20px;
+//   height: 20px;
+//   display: block;
+// }
+
+#footer-thankyou {
+  display: none;
+}
+
+@import 'mixins/index';
+@import 'variables';
+@import 'base/index';
+@import 'base/fonts';
+@import 'components/index';
+@import 'blocks/index';
+@import 'layout/index';
+
+.wp-block {
+  max-width: 1280px;
+}

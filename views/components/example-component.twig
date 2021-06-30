@@ -1,0 +1,14 @@
+{#
+  component
+  Short description of the component.
+  @param {string/bool/object/array/int} name (further information)
+#}
+{# Parameters #}
+{% set param = component.value %}
+{# Variables #}
+{% set var = param.changedValue %}
+{# Output #}
+{% if component|length %}
+  <div class="component"></div>
+{% endif %}
+

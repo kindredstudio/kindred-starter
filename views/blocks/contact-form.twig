@@ -1,0 +1,32 @@
+{#
+  Title: Contact Form
+  Description: A contact form
+  Category: kindred
+  Icon: megaphone
+  Keywords: example
+  Mode: edit
+  Align: left
+  PostTypes: page
+  SupportsAlign: false
+  SupportsMode: true
+  SupportsMultiple: true
+  supportsCustomClassName: true
+#}
+
+{% set style = "
+  --background-color: #{fields.background_colour};
+  --text-color: #{fields.text_colour};
+  padding: var(--spacer) 0;"|trim
+%}
+
+<div class="b-contact-form" style="{{ style }}">
+	<div class="b-contact-form__container wrapper">
+		<div class="b-contact-form__start">
+			<h1>{{ fields.heading }}</h1>
+			<p>{{ fields.text }}</p>
+		</div>
+		<div class="b-contact-form__end">
+			{{ fields.shortcode }}
+		</div>
+	</div>
+</div>

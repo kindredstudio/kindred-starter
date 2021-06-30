@@ -1,0 +1,161 @@
+form {
+  margin: 0;
+}
+
+a,
+area,
+button,
+[role='button'],
+input,
+label,
+select,
+summary,
+textarea {
+  touch-action: manipulation;
+}
+
+input,
+textarea {
+  color: $color_text;
+
+  @include placeholder {
+    color: $color_text;
+    font-family: $font_main;
+    font-size: 1.8rem;
+    font-style: italic;
+    letter-spacing: 0.01em;
+  }
+}
+
+select,
+input[type='submit'] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+button,
+input[type='submit'],
+label[for] {
+  cursor: pointer;
+}
+
+textarea {
+  min-height: 170px;
+  vertical-align: top;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+// Force option color (affects IE only)
+option {
+  background-color: $color_body;
+  color: $color_text;
+}
+
+.input-error {
+  border-color: $color_error;
+  background-color: $color_error-bg;
+  color: $color_text;
+}
+
+// Caldera
+
+.caldera-grid {
+  .row {
+    margin-bottom: 3rem;
+
+    &:nth-last-child(n+3) {
+      .single {
+        @include flex-between;
+
+        .form-group {
+          flex-basis: 47.5%;
+        }
+      }
+    }
+  }
+
+  select.form-control {
+    font-style: italic;
+    line-height: 1.2;
+  }
+
+  .last_row {
+    text-align: center;
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.8em 0 0.65em;
+    border: none;
+    border-bottom: 1px solid $color_border;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    color: $color_text;
+    font-family: $font_main;
+
+    &[disabled] {
+      border-color: $color_disabled-border;
+      background-color: $color_disabled;
+      cursor: default;
+    }
+  }
+
+  input[type='submit'] {
+    width: auto;
+    border-bottom: none;
+    transition: all 300ms ease;
+
+    &:hover {
+      color: $color_link-hover;
+    }
+  }
+}
+
+.mc4wp-form {
+  .flex-between {
+    align-items: center;
+
+    .column {
+      flex-basis: 42%;
+    }
+  }
+
+  input {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.8em 0 0.65em;
+    border: none;
+    border-bottom: 1px solid $color_border;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    color: $color_text;
+    font-family: $font_main;
+
+    &[disabled] {
+      border-color: $color_disabled-border;
+      background-color: $color_disabled;
+      cursor: default;
+    }
+  }
+
+  .btn {
+    input[type='submit'] {
+      width: auto;
+      padding: 0.8em 0 0;
+      border-bottom: none;
+      transition: all 300ms ease;
+
+      &:hover {
+        color: $color_link-hover;
+      }
+    }
+  }
+}

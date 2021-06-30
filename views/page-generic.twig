@@ -1,0 +1,12 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<article class="page-generic-container" id="post-{{ post.ID }}">
+		<div class="wrapper wrapper--generic">
+			<h2 class="page-title">{{ post.title }}</h2>
+			<h5>Updated:
+				{{ post.modified_date }}</h5>
+			{{ post.content | raw }}
+		</article>
+	</div>
+{% endblock %}

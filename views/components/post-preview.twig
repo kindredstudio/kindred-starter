@@ -1,0 +1,14 @@
+<article class="preview preview-post">
+	{% if post.get_thumbnail %}
+		<img class="u-block" src="{{ post.thumbnail.src | resize(100)}}" srcset="{{ post.thumbnail.src | resize(1168, 778)}} 1168w, {{ post.thumbnail.src | resize(584, 389)}} 584w" sizes="40vw" loading="lazy" width="584" height="389">
+	{% endif %}
+	<div class="preview-post__meta">
+		{% for cat in post.categories|slice(0,1) %}
+			<h5 class="category">
+				<a href="{{ cat.link }}">{{ cat.title }}</a>
+			</h5>
+		{% endfor %}
+		<h2>{{post.title}}</h2>
+		<a href="{{post.link}}" class="btn btn-primary">Read More</a>
+	</div>
+</article>

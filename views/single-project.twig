@@ -1,0 +1,18 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<article class="project-single">
+		<img class="project-single__thumb" src='{{ post.thumbnail.src }}' alt='{{ post.thumbnail.title }}'>
+		<section class="project-single__meta wrapper">
+			<h1 class="project-single__title">{{ post.title }}</h1>
+		</section>
+		<section class="project-single__content wrapper">
+			{{ post.content }}
+		</section>
+		<div class="project-single__back">
+			<a class="btn btn-secondary u-mb-0" href="{{ site.url }}/project">View More Projects</a>
+		</div>
+	</article>
+
+{% endblock %}

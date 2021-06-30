@@ -1,0 +1,21 @@
+{% include ['components/nav.twig'] %}
+
+{% if options.banner_text %}
+  {% include ['components/promo-banner.twig'] %}
+{% endif %}
+
+<header class="site-header flex-between" role="banner">
+
+  {% set logo = Image(options.logo) %}
+
+	<a href="{{ site.link }}" aria-label="Home">
+		{% if logo.id != null %}
+			<img class="site-logo" src="{{ logo.src }}" alt="logo">
+		{% else %}
+			{{ site.name }}
+		{% endif %}
+	</a>
+
+  {% include "hamburger.twig" %}
+
+</header>

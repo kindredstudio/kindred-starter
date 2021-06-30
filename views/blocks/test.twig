@@ -1,0 +1,28 @@
+{#
+  Title: Example
+  Description: test
+  Category: kindred
+  Icon: megaphone
+  Keywords: test
+  Mode: edit
+  Align: left
+  PostTypes: page
+  SupportsAlign: false
+  SupportsMode: true
+  SupportsMultiple: true
+  supportsCustomClassName: true
+#}
+
+<section class="b-test">
+	<div class="b-test__container wrapper">
+		<div class="b-test__start">
+			<h2>{{ fields.heading }}</h2>
+			<p>{{ fields.text }}</p>
+			<a href="{{ fields.button.url }}" {{ item.button.target == "_blank" ? 'target="_blank" rel="noopener noreferrer"' }} class="btn btn-primary">{{ fields.button.title }}</a>
+		</div>
+		<div class="b-test__end">
+			{% set image = Image(fields.image) %}
+      <img src="{{ image.src | resize(100) }}" srcset="{{ image.src | resize(360, 360) }} 360w, {{ image.src | resize(720, 720) }} 720w, {{ image.src | resize(1440, 1440) }} 1440w" sizes="100vw" alt="{{ image.alt }}">
+		</div>
+	</div>
+</section>

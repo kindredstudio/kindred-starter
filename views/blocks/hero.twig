@@ -1,0 +1,47 @@
+{#
+  Title: Hero
+  Description: A hero banner
+  Category: kindred
+  Icon: megaphone
+  Keywords: hero
+  Mode: edit
+  Align: left
+  PostTypes: page
+  SupportsAlign: false
+  SupportsMode: true
+  SupportsMultiple: true
+  supportsCustomClassName: true
+#}
+
+{% set hasBackgroundVideo = fields.background %}
+
+{% if not hasBackgroundVideo %}
+	{% set hasBackgroundImage = true %}
+	{% set background_image = Image(fields.background_image) %}
+{% endif %}
+
+
+
+<section class="b-hero {{ hasBackgroundVideo ? 'has-background-video' }} {{ hasBackgroundImage ? 'has-background-image' }}">
+	{% if hasBackgroundVideo %}
+		{% include "video-background.twig" %}
+	{% endif %}
+	{% if hasBackgroundImage %}
+		<picture class="b-hero__background">
+			<source media="(max-width: 600px)" srcset="{{ background_image.src|resize(750,1000)}}">
+			<img src="{{ background_image.src|resize(100) }}" srcset="{{ background_image.src|resize(720, 410)}} 720w, {{ background_image.src|resize(1440, 820)}} 1440w, {{ background_image.src|resize(2880,1640)}} 2880w" sizes="200vw" alt="{{ background_image.title }}">
+		</picture>
+	{% endif %}
+	<div class="b-hero__container wrapper">
+		<div class="b-hero__container-inner">
+			{% if fields.text %}
+				<div class="b-hero__text">
+					{{ fields.text | raw  }}
+				</div>
+			{% endif %}
+			{% if fields.button %}
+				<a href='{{ fields.button.url }}' class="btn btn-primary" target='{{ fields.button.target }}'>{{ fields.button.title }}</a>
+			{% endif %}
+		</div>
+	</div>
+</section>

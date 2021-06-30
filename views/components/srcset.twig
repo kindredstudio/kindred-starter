@@ -1,0 +1,26 @@
+{#
+    srcset
+    A responsive image with some sensible defaults.
+    @param {int} small (in pixels, optional)
+    @param {int} medium (in pixels, optional)
+    @param {int} id (the image's WordPress ID)
+    @param {int} large (in pixels, optional)
+    @param {int} xl (in pixels, optional)
+    @param {string} class (an HTML class, optional)
+#}
+
+{# Parameters #}
+{% set img = Image(id) %}
+
+{# Output #}
+<img src="{{ img.src|resize(50) }}"
+  srcset="
+  {{ img.src|resize(small|default(400)) }} {{ small|default(400) }}w,
+  {{ img.src|resize(medium|default(600)) }} {{ medium|default(600) }}w,
+
+  {% if thumb == null %}
+    {{ img.src|resize(large|default(1080)) }} {{ medium|default(1080) }}w,
+    {{ img.src|resize(xl|default(1900)) }} {{ medium|default(1900) }}w
+  {% endif %}"
+  {% if class %}class="{{ class }}"{% endif %}
+  alt="{{ img.title }}" />

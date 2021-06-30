@@ -1,0 +1,22 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="archive-project">
+		<div class="archive-project__container wrapper">
+			<div class="archive-project__intro">
+				<h2>{{ options.project_intro }}</h2>
+			</div>
+			<div class="archive-project__posts">
+				{% for post in posts %}
+					{% include "post-preview.twig" %}
+				{% endfor %}
+			</div>
+			<div class="archive-project__more-posts" data-more-posts></div>
+			<div class="archive-project__load-more">
+				{% if posts.pagination.next %}
+					<a class="btn btn-secondary btn-load-more" href="{{ posts.pagination.next.link }}" data-load-more>View More</a>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

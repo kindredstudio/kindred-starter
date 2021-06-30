@@ -1,0 +1,9 @@
+{% extends "base.twig" %}
+
+{% block content %}
+  <div class="wrapper posts-grid">
+    {% for post in posts %}
+      {% include ['components/post-preview.twig'] %}
+    {% endfor %}
+  </div>
+{% endblock %}

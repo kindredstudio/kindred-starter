@@ -1,0 +1,25 @@
+.b-hero {
+  position: relative;
+  display: flex;
+  min-height: 789px;
+  align-items: flex-end;
+  padding-bottom: var(--spacer-large);
+  background-color: var(--background-color);
+  color: var(--text-color);
+
+  &__background,
+  video {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 5;
+  }
+}
