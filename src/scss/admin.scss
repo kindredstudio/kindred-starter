@@ -11,8 +11,8 @@
   display: none;
 }
 
-@import 'mixins/index';
-@import 'variables';
+@import 'mixins/mixins';
+@import 'variables/index';
 @import 'base/index';
 @import 'base/fonts';
 @import 'components/index';

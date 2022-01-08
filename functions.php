@@ -151,8 +151,8 @@ function kindred_scripts()
 
   // Enqueue our stylesheet and JS file with a jQuery dependency.
   // Note that we aren't using WordPress' default style.css, and instead enqueueing the file of compiled Sass.
-  wp_enqueue_style('styles', get_template_directory_uri() . '/dist/css/bundle.css', 1.0);
-  wp_enqueue_script('scripts', get_template_directory_uri() . '/dist/js/bundle.js', '1.0.0', true);
+  wp_enqueue_style('styles', get_template_directory_uri() . '/dist/bundle.css', 1.0);
+  wp_enqueue_script('scripts', get_template_directory_uri() . '/dist/bundle.js', '1.0.0', true);
 }
 
 add_action('wp_enqueue_scripts', 'kindred_scripts');

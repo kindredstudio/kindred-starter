@@ -1,12 +1,12 @@
 {
-  "name": "mikewalker24/kindred",
+  "name": "kindred-starter",
   "description": "An opinionated starter theme for WordPress, based on Timber Starter Tacklebox",
   "type": "wordpress-theme",
   "minimum-stability": "stable",
   "authors": [
     {
-      "email": "hello@mikewalker.co",
-      "name": "mikewalker"
+      "email": "dev@kindredstudio.ca",
+      "name": "kindredstudio"
     }
   ],
   "repositories": [
